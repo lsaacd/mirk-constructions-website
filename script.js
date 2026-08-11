@@ -54,4 +54,35 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 1200);
     });
   }
+
+  // 4. FAQ Accordion Logic
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const toggle = item.querySelector('.faq-toggle');
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        // Toggle the active class to show/hide content
+        item.classList.toggle('active');
+      });
+    }
+  });
+
+  // 5. Back to Top Button Logic
+  const backToTopBtn = document.getElementById('backToTopBtn');
+  if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
 });
