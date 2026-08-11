@@ -94,3 +94,26 @@ This document serves as the official step-by-step log and execution guide for se
 ---
 
 *Log generated for contractor website setup & automated GitHub/Vercel pipeline.*
+
+---
+
+## Appendix: Advanced Competitor Analysis (Web Scraping)
+
+If you ever need to analyze a competitor's website to see what backend forms, integrations, or fonts they are using (like we did with Rossi Painting), you can use these command-line tools to extract their raw, public frontend code locally:
+
+1. **Download a live website to a local file (retains original encoding):**
+   ```bash
+   curl.exe -sL https://example.com/ -o competitor_code.html
+   ```
+
+2. **Extract all `<script>` tags (to find CRMs, Hubspot, or WordPress plugins):**
+   ```powershell
+   powershell -c "Select-String -Pattern '<script' competitor_code.html | Out-File -FilePath scripts_utf8.txt -Encoding utf8"
+   ```
+
+3. **Search for exact colors or fonts (e.g., 'font-family'):**
+   ```powershell
+   powershell -c "Select-String -Pattern 'font-family: [^;]+' competitor_code.html | Select-Object -First 10"
+   ```
+
+*Note: These commands only pull the public HTML/CSS/JS that web browsers already download. They do not access private backend databases or sensitive server files.*

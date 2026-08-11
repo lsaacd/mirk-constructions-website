@@ -5,8 +5,8 @@
 :root {
   --primary-blue: #102B4E;      /* Deep Professional Blue from reference */
   --secondary-blue: #1C3F6E;
-  --accent-orange: #C94C1D;     /* Vibrant Orange for buttons */
-  --accent-orange-hover: #A83E15;
+  --accent-orange: #eb2025;     /* Vibrant Red from Rossi */
+  --accent-orange-hover: #c7191e;
   --bg-dark: #121212;           /* For hero left side */
   
   --bg-light: #F4F6F8;
@@ -32,14 +32,14 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   color: var(--text-main);
   background-color: var(--bg-card); /* White default */
   line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   line-height: 1.2;
 }
@@ -83,9 +83,11 @@ img {
   justify-content: center;
   gap: 8px;
   padding: 12px 24px;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   cursor: pointer;
   border: none;
   transition: var(--transition);
@@ -93,15 +95,15 @@ img {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent-orange), #ff6a00);
+  background: var(--accent-orange);
   color: #FFFFFF;
-  box-shadow: 0 4px 15px rgba(201, 76, 29, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, var(--accent-orange-hover), #d35400);
+  background: var(--accent-orange-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(201, 76, 29, 0.4);
+  box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.4);
 }
 
 .btn-sm {
@@ -128,12 +130,14 @@ img {
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
   transition: var(--transition);
 }
 
 .btn-icon-lg:hover {
   background-color: var(--accent-orange-hover);
   transform: scale(1.05);
+  box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.4);
 }
 
 .btn-icon-sm {
@@ -146,11 +150,13 @@ img {
   align-items: center;
   justify-content: center;
   font-size: 1.1rem;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
   transition: var(--transition);
 }
 .btn-icon-sm:hover {
   background-color: var(--accent-orange-hover);
   transform: scale(1.05);
+  box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.4);
 }
 
 /* --- TOP BAR --- */
@@ -213,7 +219,7 @@ img {
 }
 
 .brand-name {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.8rem;
   font-weight: 900;
   color: var(--primary-blue);
@@ -992,7 +998,7 @@ img {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-weight: 600;
   font-size: 1.1rem;
 }
@@ -1061,7 +1067,7 @@ img {
   background: none;
   border: none;
   text-align: left;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--primary-blue);
