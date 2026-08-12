@@ -1,0 +1,1 @@
+# Place your favicon files in this directory (favicon.ico, favicon-32x32.png, favicon-16x16.png, apple-touch-icon.png)
