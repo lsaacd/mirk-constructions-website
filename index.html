@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RDG Constructions | Modesto's Premier General Contractor</title>
-  <meta name="description" content="Trusted residential contractor in Modesto specializing in painting, roofing, bathroom remodels, and general maintenance. Se Habla Español.">
-  
+  <title>Mirk Construction | Premier General Contractor</title>
+  <meta name="description"
+    content="Trusted residential contractor specializing in painting, roofing, bathroom remodels, and general maintenance. Se Habla Español.">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
   <!-- Top Announcement / Bar -->
   <div class="top-bar">
     <div class="container top-bar-content">
       <div class="top-info">
-        <span><i class="fa-solid fa-earth-americas"></i> Se Habla Español</span>
-        <span><i class="fa-solid fa-location-dot"></i> Proudly Serving Modesto & Surrounding Areas</span>
+        <div class="lang-toggle">
+          <button class="lang-btn" data-lang="es">Español</button>
+          <button class="lang-btn active" data-lang="en">English</button>
+        </div>
+        <span data-es="<i class='fa-solid fa-location-dot'></i> Orgullosamente Sirviendo a Modesto y Áreas Circundantes"><i class="fa-solid fa-location-dot"></i> Proudly Serving Modesto & Surrounding Areas</span>
       </div>
       <div class="top-contact">
         <a href="tel:4083750157" class="phone-link"><i class="fa-solid fa-phone"></i> (408) 375-0157</a>
@@ -35,23 +43,24 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="#" class="brand">
+        <img src="assets/logo/logo.svg" alt="Mirk Construction Logo" class="brand-logo">
         <div class="brand-text">
-          <span class="brand-name">RDG</span>
-          <span class="brand-sub">CONSTRUCTIONS</span>
+          <span class="brand-name">Mirk</span>
+          <span class="brand-sub">CONSTRUCTION</span>
         </div>
       </a>
 
       <nav class="nav-links" id="navLinks">
-        <a href="#home" class="nav-link active">HOME</a>
-        <a href="#about" class="nav-link">ABOUT</a>
-        <a href="#services" class="nav-link">SERVICES <i class="fa-solid fa-caret-down"></i></a>
-        <a href="#portfolio" class="nav-link">PORTFOLIO</a>
+        <a href="#home" class="nav-link active" data-es="INICIO">HOME</a>
+        <a href="#about" class="nav-link" data-es="NOSOTROS">ABOUT</a>
+        <a href="#services" class="nav-link" data-es="SERVICIOS <i class='fa-solid fa-caret-down'></i>">SERVICES <i class="fa-solid fa-caret-down"></i></a>
+        <a href="#portfolio" class="nav-link" data-es="PORTAFOLIO">PORTFOLIO</a>
         <!-- <a href="#reviews" class="nav-link">REVIEWS</a> -->
-        <a href="#contact" class="nav-link">CONTACT</a>
+        <a href="#contact" class="nav-link" data-es="CONTACTO">CONTACT</a>
       </nav>
 
       <div class="nav-cta-group">
-        <a href="#estimate" class="btn btn-primary nav-btn">Get a Quote</a>
+        <a href="#estimate" class="btn btn-primary nav-btn" data-es="Obtener Presupuesto">Get a Quote</a>
         <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
           <i class="fa-solid fa-bars"></i>
         </button>
@@ -74,27 +83,27 @@
         </div>
         -->
 
-        <h1>MODESTO'S TRUSTED<br><span class="highlight">CONTRACTORS FOR</span><br>RESIDENTIAL EXCELLENCE</h1>
-        
+        <h1 data-es="CONTRATISTA GENERAL<br><span class='highlight'>DE CONFIANZA</span><br>PARA SU HOGAR">TRUSTED<br><span class="highlight">GENERAL CONTRACTOR</span><br>FOR YOUR HOME</h1>
+
         <ul class="trust-list">
-          <li><i class="fa-solid fa-face-smile"></i> 100% Satisfaction Guarantee</li>
-          <li><i class="fa-solid fa-medal"></i> Top-Rated Local Company</li>
-          <li><i class="fa-solid fa-shield-check"></i> Comprehensive Work Warranty</li>
+          <li data-es="<i class='fa-solid fa-clipboard-check'></i> Aprobación de Recorrido Final"><i class="fa-solid fa-clipboard-check"></i> Final Walkthrough Approval</li>
+          <li data-es="<i class='fa-solid fa-user-check'></i> Un Solo Contratista — Comunicación Directa"><i class="fa-solid fa-user-check"></i> One Contractor — Direct Communication</li>
+          <li data-es="<i class='fa-solid fa-shield-halved'></i> Totalmente Licenciado y Asegurado"><i class="fa-solid fa-shield-halved"></i> Fully Licensed & Bonded</li>
         </ul>
-        
+
         <div class="hero-actions">
-          <a href="#estimate" class="btn btn-primary btn-lg">Get a Quote</a>
+          <a href="#estimate" class="btn btn-primary btn-lg" data-es="Obtener Presupuesto">Get a Quote</a>
           <a href="tel:4083750157" class="btn btn-icon-lg" aria-label="Call Us"><i class="fa-solid fa-phone"></i></a>
         </div>
       </div>
     </div>
-    
+
     <div class="hero-right">
       <!-- Image Collage -->
       <div class="hero-collage">
-        <div class="collage-col" style="background-image: url('assets/images/addition.png');"></div>
-        <div class="collage-col" style="background-image: url('assets/images/bathroom.png');"></div>
-        <div class="collage-col" style="background-image: url('assets/images/hero.png');"></div>
+        <div class="collage-col" style="background-image: url('assets/images/kitchen-after-1.jpg');"></div>
+        <div class="collage-col" style="background-image: url('assets/images/master-bath-1.jpg');"></div>
+        <div class="collage-col" style="background-image: url('assets/images/roof-after-1.jpg');"></div>
       </div>
     </div>
   </section>
@@ -102,10 +111,10 @@
   <!-- Trust Badges Bar -->
   <section class="trust-bar">
     <div class="container trust-bar-content">
-      <div class="trust-item"><i class="fa-solid fa-file-contract"></i> Fully Licensed & Insured</div>
-      <div class="trust-item"><i class="fa-solid fa-star"></i> Top Rated Local Contractor</div>
-      <div class="trust-item"><i class="fa-solid fa-handshake-angle"></i> 100% Satisfaction Guarantee</div>
-      <div class="trust-item"><i class="fa-solid fa-earth-americas"></i> Se Habla Español</div>
+      <div class="trust-item" data-es="<i class='fa-solid fa-file-contract'></i> Totalmente Licenciado y Asegurado"><i class="fa-solid fa-file-contract"></i> Fully Licensed & Bonded</div>
+      <div class="trust-item" data-es="<i class='fa-solid fa-award'></i> Más de 25 Años de Experiencia"><i class="fa-solid fa-award"></i> 25+ Years of Experience</div>
+      <div class="trust-item" data-es="<i class='fa-solid fa-clipboard-check'></i> Aprobación de Recorrido Final"><i class="fa-solid fa-clipboard-check"></i> Final Walkthrough Approval</div>
+      <div class="trust-item" data-es="<i class='fa-solid fa-earth-americas'></i> Se Habla Español"><i class="fa-solid fa-earth-americas"></i> Se Habla Español</div>
     </div>
   </section>
 
@@ -113,21 +122,30 @@
   <section class="intro-section" id="about">
     <div class="container intro-container">
       <div class="intro-text">
-        <h2>THE GO-TO CONTRACTORS IN MODESTO</h2>
-        <p>
-          RDG Constructions is proud to be the go-to choice for homeowners in Modesto and surrounding areas seeking quality, reliability, and lasting results. Our experienced team takes pride in every detail, from thorough preparation to quality finishes, ensuring your property looks its best for years to come.
+        <h2 data-es="SU CONTRATISTA GENERAL DE CONFIANZA">YOUR TRUSTED GENERAL CONTRACTOR</h2>
+        <p data-es="Mirk Construction es un servicio de contratista general operado por su dueño, orgullosamente sirviendo a propietarios de viviendas en Modesto y áreas circundantes. Cada proyecto recibe mi atención personal de principio a fin.">
+          Mirk Construction is a hands-on, owner-operated general contracting service proudly serving homeowners in
+          Modesto and surrounding areas. Every project receives my personal attention from start to finish.
         </p>
-        <p>
-          We handle everything residential—including painting, roofing, bathroom remodels, and general maintenance. <em>(Note: We do not service HVAC, fans, or metal fencing)</em>. We arrive on time, respect your space, and deliver exceptional craftsmanship.
+        <p data-es="Brindando <strong>servicios residenciales integrales de principio a fin</strong>, especializándonos en <strong>remodelación de cocinas y baños</strong>, con fortalezas principales en <strong>trabajos de electricidad y plomería</strong>. Ya sea un simple cambio de accesorios o una renovación completa, cada trabajo se trata con el mismo nivel de cuidado y precisión.">
+          Providing <strong>comprehensive whole-home residential services from top to bottom</strong>, specializing in
+          <strong>kitchen and bathroom remodels</strong>, with core trade strengths in <strong>electrical and plumbing
+            work</strong>. Whether it's a single fixture swap or a full renovation, every job is treated with the same
+          level of care and precision.
+        </p>
+        <p class="service-exclusions-note" style="font-size: 0.9em; opacity: 0.9; margin-top: 0.5rem;" data-es="<i class='fa-solid fa-circle-info'></i> <strong>Aviso de Alcance:</strong> Nuestras soluciones de servicio completo cubren proyectos residenciales completos de interior y exterior. <em>(Exclusiones: Instalación de alfombras, puertas de garaje, sistemas de canaletas, HVAC y cercas de metal).</em>">
+          <i class="fa-solid fa-circle-info"></i> <strong>Scope Notice:</strong> Our full-service solutions cover
+          complete interior & exterior residential projects. <em>(Exclusions: Carpet flooring, garage door
+            installations, gutter systems, HVAC, and metal fencing).</em>
         </p>
         <div class="intro-actions mt-4">
-          <a href="#estimate" class="btn btn-primary">Get a Quote</a>
+          <a href="#estimate" class="btn btn-primary" data-es="Obtener Presupuesto">Get a Quote</a>
           <a href="tel:4083750157" class="btn btn-icon-sm ml-3"><i class="fa-solid fa-phone"></i></a>
         </div>
       </div>
       <div class="intro-images">
-        <img src="assets/images/hero.png" alt="Interior Remodel" class="img-back">
-        <img src="assets/images/addition.png" alt="Exterior Work" class="img-front">
+        <img src="assets/images/kitchen-after-2.jpg" alt="Modern Kitchen Remodel" class="img-back">
+        <img src="assets/images/bath-2.jpg" alt="Walk-In Shower Remodel" class="img-front">
       </div>
     </div>
   </section>
@@ -135,74 +153,74 @@
   <!-- Services Carousel Section -->
   <section class="services-carousel-section" id="services">
     <div class="services-layout">
-      
+
       <div class="services-header">
-        <h2>SERVICES WE<br>OFFER</h2>
-        <p>Whether you're updating a single bathroom or needing full property maintenance, RDG Constructions brings the skill, precision, and care needed to deliver exceptional results across all your residential projects.</p>
+        <h2 data-es="SERVICIOS QUE<br>OFRECEMOS">SERVICES WE<br>OFFER</h2>
+        <p data-es="Ningún proyecto es demasiado pequeño y ningún detalle se pasa por alto.">No project is too small and no detail is overlooked.</p>
       </div>
 
       <div class="services-slider-container">
         <!-- Scroll controls -->
         <button class="slider-btn left" id="slideLeft"><i class="fa-solid fa-chevron-left"></i></button>
         <button class="slider-btn right" id="slideRight"><i class="fa-solid fa-chevron-right"></i></button>
-        
+
         <div class="services-slider" id="servicesSlider">
-          <!-- Slide 1 -->
+          <!-- Slide 1: Kitchen Remodeling -->
           <div class="service-slide">
             <div class="slide-image-wrapper">
-              <img src="assets/images/hero.png" alt="Professional Painting">
+              <img src="assets/images/kitchen-after-1.jpg" alt="Kitchen Remodeling">
               <div class="slide-overlay">
-                <h3>PROFESSIONAL PAINTING</h3>
-                <p>Interior and exterior painting services that refresh and protect your home.</p>
+                <h3 data-es="REMODELACIÓN DE COCINAS">KITCHEN REMODELING</h3>
+                <p data-es="Gabinetes a medida, encimeras de cuarzo, placas para salpicaduras de azulejos y renovaciones completas de cocina.">Custom cabinetry, quartz countertops, tile backsplashes, and full kitchen upgrades.</p>
               </div>
             </div>
             <div class="slide-actions">
-              <a href="#contact" class="btn btn-primary btn-sm">View Service</a>
+              <a href="#portfolio-kitchen" class="btn btn-primary btn-sm" data-es="Ver Proyectos">View Projects</a>
               <a href="tel:4083750157" class="btn btn-icon-sm"><i class="fa-solid fa-phone"></i></a>
             </div>
           </div>
 
-          <!-- Slide 2 -->
+          <!-- Slide 2: Bathroom Remodeling -->
           <div class="service-slide">
             <div class="slide-image-wrapper">
-              <img src="assets/images/bathroom.png" alt="Bathroom Remodels">
+              <img src="assets/images/master-bath-1.jpg" alt="Bathroom Remodels">
               <div class="slide-overlay">
-                <h3>BATHROOM REMODELS</h3>
-                <p>Turn your outdated bathroom into a modern, luxurious oasis.</p>
+                <h3 data-es="REMODELACIÓN DE BAÑOS">BATHROOM REMODELS</h3>
+                <p data-es="Pisos de baldosas, tocadores dobles a medida, duchas a ras de suelo e instalación de accesorios.">Tile flooring, custom double vanities, walk-in showers, and fixture installation.</p>
               </div>
             </div>
             <div class="slide-actions">
-              <a href="#contact" class="btn btn-primary btn-sm">View Service</a>
+              <a href="#portfolio-bathroom" class="btn btn-primary btn-sm" data-es="Ver Proyectos">View Projects</a>
               <a href="tel:4083750157" class="btn btn-icon-sm"><i class="fa-solid fa-phone"></i></a>
             </div>
           </div>
 
-          <!-- Slide 3 -->
+          <!-- Slide 3: Roofing Replacement -->
           <div class="service-slide">
             <div class="slide-image-wrapper">
-              <img src="assets/images/addition.png" alt="Roofing Services">
+              <img src="assets/images/roof-after-1.jpg" alt="Roofing Replacement">
               <div class="slide-overlay">
-                <h3>ROOFING SERVICES</h3>
-                <p>Quality residential roof repairs and full replacements built to last.</p>
+                <h3 data-es="REEMPLAZO DE TECHOS">ROOFING REPLACEMENT</h3>
+                <p data-es="Remoción completa de techos e instalación de tejas asfálticas arquitectónicas de alta resistencia.">Complete roof strip-downs and heavy-duty architectural asphalt shingle installations.</p>
               </div>
             </div>
             <div class="slide-actions">
-              <a href="#contact" class="btn btn-primary btn-sm">View Service</a>
+              <a href="#portfolio-roofing" class="btn btn-primary btn-sm" data-es="Ver Proyectos">View Projects</a>
               <a href="tel:4083750157" class="btn btn-icon-sm"><i class="fa-solid fa-phone"></i></a>
             </div>
           </div>
 
-          <!-- Slide 4 -->
+          <!-- Slide 4: Electrical & Plumbing Trade Work -->
           <div class="service-slide">
             <div class="slide-image-wrapper">
-              <img src="assets/images/hero.png" alt="General Maintenance">
+              <img src="assets/images/masterpiece-bath2.jpg" alt="Electrical & Plumbing Work">
               <div class="slide-overlay">
-                <h3>GENERAL MAINTENANCE</h3>
-                <p>Comprehensive residential upkeep to keep your property in top condition.</p>
+                <h3 data-es="ELECTRICIDAD Y PLOMERÍA">ELECTRICAL & PLUMBING</h3>
+                <p data-es="Iluminación empotrada, instalación de accesorios y trabajos completos de infraestructura para remodelaciones.">Recessed lighting, fixture installations, and full rough-in trade work for remodels.</p>
               </div>
             </div>
             <div class="slide-actions">
-              <a href="#contact" class="btn btn-primary btn-sm">View Service</a>
+              <a href="#estimate" class="btn btn-primary btn-sm" data-es="Ver Servicio">View Service</a>
               <a href="tel:4083750157" class="btn btn-icon-sm"><i class="fa-solid fa-phone"></i></a>
             </div>
           </div>
@@ -215,59 +233,248 @@
   <!-- Our Process Section -->
   <section class="process-section" id="process">
     <div class="container text-center">
-      <h2 class="section-title-blue mb-5">HOW IT WORKS</h2>
+      <h2 class="section-title-blue mb-5" data-es="CÓMO FUNCIONA">HOW IT WORKS</h2>
       <div class="process-steps">
         <div class="step-card">
           <div class="step-icon"><i class="fa-solid fa-phone-volume"></i></div>
-          <h3>1. Free Estimate</h3>
-          <p>Contact us with your project details and we will provide a transparent, upfront quote.</p>
+          <h3 data-es="1. Consulta del Proyecto">1. Project Consultation</h3>
+          <p data-es="Comuníquese con los detalles de su proyecto para discutir su visión, alcance y presupuesto.">Reach out with your project details to discuss your vision, scope, and project estimate.</p>
         </div>
         <div class="step-card">
           <div class="step-icon"><i class="fa-solid fa-calendar-check"></i></div>
-          <h3>2. Schedule & Prep</h3>
-          <p>We work around your schedule, arriving on time and fully protecting your property.</p>
+          <h3 data-es="2. Programación y Preparación">2. Schedule & Prep</h3>
+          <p data-es="Me adapto a su horario, llego a tiempo y protejo completamente su propiedad antes de que comience cualquier trabajo.">I work around your schedule, arrive on time, and fully protect your property before any work begins.</p>
         </div>
         <div class="step-card">
           <div class="step-icon"><i class="fa-solid fa-hammer"></i></div>
-          <h3>3. Expert Execution</h3>
-          <p>Our skilled team completes the work with precision, using premium materials.</p>
+          <h3 data-es="3. Ejecución Experta">3. Expert Execution</h3>
+          <p data-es="Cada tarea se completa con precisión práctica y materiales de calidad — sin atajos.">Every task is completed with hands-on precision and quality materials — no corners cut.</p>
         </div>
         <div class="step-card">
           <div class="step-icon"><i class="fa-solid fa-clipboard-check"></i></div>
-          <h3>4. Final Walkthrough</h3>
-          <p>We ensure you are 100% satisfied before considering the job complete.</p>
+          <h3 data-es="4. Recorrido Final">4. Final Walkthrough</h3>
+          <p data-es="Hago un recorrido por el proyecto terminado con usted personalmente para asegurarme de que cada detalle cumpla con sus expectativas.">I walk through the finished project with you personally to make sure every detail meets your expectations.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio Grid -->
+  <!-- Before & After Showcase -->
   <section class="portfolio-section" id="portfolio">
     <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="section-title-blue">SEE OUR PAST MASTERPIECES</h2>
+      <!-- Bathroom Before/After Showcase Heading -->
+      <div class="text-center mb-5" id="portfolio-bathroom">
+        <h2 class="section-title-blue" data-es="REMODELACIÓN DE BAÑO — ANTES Y DESPUÉS">BATHROOM REMODEL — BEFORE & AFTER</h2>
+        <p class="ba-subtitle" data-es="Arrastre el control deslizante para revelar la transformación. Renovación de baño de alcance completo que incluye pisos de mármol, instalación de tocador a medida, conversión de bañera a ducha y accesorios de plomería actualizados.">Drag the slider to reveal the transformation. Full-scope bathroom renovation including
+          marble tile flooring, custom vanity installation, tub-to-shower conversion, and updated plumbing fixtures.</p>
       </div>
 
-      <div class="portfolio-grid-3">
-        <div class="portfolio-grid-item">
-          <img src="assets/images/hero.png" alt="Completed Project" loading="lazy">
+      <!-- Bathroom Before/After Comparison Slider -->
+      <div class="ba-slider-wrapper mb-5">
+        <div class="ba-slider">
+          <!-- After Image (Background — full width) -->
+          <img src="assets/images/bath-after-1.jpg"
+            alt="Bathroom Remodel — After: Marble tile, white shaker vanity, glass enclosure" class="ba-after-img">
+
+          <!-- Before Image (Clipped — left side) -->
+          <div class="ba-before-clip">
+            <img src="assets/images/bath-before.jpg"
+              alt="Bathroom Remodel — Before: Original tile, oak vanity, outdated fixtures" class="ba-before-img">
+          </div>
+
+          <!-- Slider Handle -->
+          <div class="ba-handle">
+            <div class="ba-handle-line"></div>
+            <div class="ba-handle-circle">
+              <i class="fa-solid fa-arrows-left-right"></i>
+            </div>
+            <div class="ba-handle-line"></div>
+          </div>
+
+          <!-- Labels -->
+          <span class="ba-label ba-label-before" data-es="ANTES">BEFORE</span>
+          <span class="ba-label ba-label-after" data-es="DESPUÉS">AFTER</span>
         </div>
-        <div class="portfolio-grid-item">
-          <img src="assets/images/addition.png" alt="Completed Project" loading="lazy">
-        </div>
-        <div class="portfolio-grid-item">
-          <img src="assets/images/bathroom.png" alt="Completed Project" loading="lazy">
-        </div>
-        <div class="portfolio-grid-item">
-          <img src="assets/images/bathroom.png" alt="Completed Project" loading="lazy">
-        </div>
-        <div class="portfolio-grid-item">
-          <img src="assets/images/hero.png" alt="Completed Project" loading="lazy">
-        </div>
-        <div class="portfolio-grid-item">
-          <img src="assets/images/addition.png" alt="Completed Project" loading="lazy">
+
+        <!-- After-Image Thumbnails -->
+        <div class="ba-thumbnails">
+          <button class="ba-thumb active" data-src="assets/images/bath-after-1.jpg" aria-label="After view 1">
+            <img src="assets/images/bath-after-1.jpg" alt="After view 1" loading="lazy">
+          </button>
+          <button class="ba-thumb" data-src="assets/images/bath-after-2.jpg" aria-label="After view 2">
+            <img src="assets/images/bath-after-2.jpg" alt="After view 2" loading="lazy">
+          </button>
+          <button class="ba-thumb" data-src="assets/images/bath-after-3.jpg" aria-label="After view 3">
+            <img src="assets/images/bath-after-3.jpg" alt="After view 3" loading="lazy">
+          </button>
         </div>
       </div>
+
+      <!-- Kitchen Before/After Showcase Heading -->
+      <div class="text-center mb-5 mt-5" id="portfolio-kitchen">
+        <h2 class="section-title-blue" data-es="REMODELACIÓN DE COCINA — ANTES Y DESPUÉS">KITCHEN REMODEL — BEFORE & AFTER</h2>
+        <p class="ba-subtitle" data-es="Arrastre el control deslizante para revelar la transformación. Renovación de cocina de alcance completo que incluye gabinetes tipo shaker grises, encimeras de cuarzo blanco, placa para salpicaduras de azulejos tipo metro, baldosas oscuras y estufa a gas de acero inoxidable.">Drag the slider to reveal the transformation. Full-scope kitchen renovation including grey shaker cabinetry, white quartz countertops, subway tile backsplash, dark floor tile, and stainless gas range.</p>
+      </div>
+
+      <!-- Kitchen Before/After Comparison Slider -->
+      <div class="ba-slider-wrapper mb-5">
+        <div class="ba-slider">
+          <!-- After Image (Background — full width) -->
+          <img src="assets/images/kitchen-after-1.jpg"
+            alt="Kitchen Remodel — After: Grey shaker cabinets, white quartz, subway tile" class="ba-after-img">
+
+          <!-- Before Image (Clipped — left side) -->
+          <div class="ba-before-clip">
+            <img src="assets/images/kitchen-before.jpg"
+              alt="Kitchen Remodel — Before: Original oak cabinets, old floor tile, dated layout" class="ba-before-img">
+          </div>
+
+          <!-- Slider Handle -->
+          <div class="ba-handle">
+            <div class="ba-handle-line"></div>
+            <div class="ba-handle-circle">
+              <i class="fa-solid fa-arrows-left-right"></i>
+            </div>
+            <div class="ba-handle-line"></div>
+          </div>
+
+          <!-- Labels -->
+          <span class="ba-label ba-label-before">BEFORE</span>
+          <span class="ba-label ba-label-after">AFTER</span>
+        </div>
+
+        <!-- After-Image Thumbnails -->
+        <div class="ba-thumbnails">
+          <button class="ba-thumb active" data-src="assets/images/kitchen-after-1.jpg" aria-label="Kitchen view 1">
+            <img src="assets/images/kitchen-after-1.jpg" alt="Kitchen view 1" loading="lazy">
+          </button>
+          <button class="ba-thumb" data-src="assets/images/kitchen-after-2.jpg" aria-label="Kitchen view 2">
+            <img src="assets/images/kitchen-after-2.jpg" alt="Kitchen view 2" loading="lazy">
+          </button>
+          <button class="ba-thumb" data-src="assets/images/kitchen-after-3.jpg" aria-label="Kitchen view 3">
+            <img src="assets/images/kitchen-after-3.jpg" alt="Kitchen view 3" loading="lazy">
+          </button>
+          <button class="ba-thumb" data-src="assets/images/kitchen-after-4.jpg" aria-label="Kitchen view 4">
+            <img src="assets/images/kitchen-after-4.jpg" alt="Kitchen view 4" loading="lazy">
+          </button>
+        </div>
+      </div>
+
+      <!-- Roofing Before/After Showcase Heading -->
+      <div class="text-center mb-5 mt-5" id="portfolio-roofing">
+        <h2 class="section-title-blue">ROOF REPLACEMENT — BEFORE & AFTER</h2>
+        <p class="ba-subtitle">Drag the slider to reveal the roof replacement. Complete strip-down of aged wood shake and installation of heavy-duty architectural asphalt shingles.</p>
+      </div>
+
+      <!-- Roofing Before/After Comparison Slider -->
+      <div class="ba-slider-wrapper mb-5">
+        <div class="ba-slider aspect-landscape">
+          <!-- After Image (Background — full width) -->
+          <img src="assets/images/roof-after-1.jpg"
+            alt="Roofing Replacement — After: New dark grey architectural shingles" class="ba-after-img">
+
+          <!-- Before Image (Clipped — left side) -->
+          <div class="ba-before-clip">
+            <img src="assets/images/roof-before.jpg"
+              alt="Roofing Replacement — Before: Weathered original wood shake roofing" class="ba-before-img">
+          </div>
+
+          <!-- Slider Handle -->
+          <div class="ba-handle">
+            <div class="ba-handle-line"></div>
+            <div class="ba-handle-circle">
+              <i class="fa-solid fa-arrows-left-right"></i>
+            </div>
+            <div class="ba-handle-line"></div>
+          </div>
+
+          <!-- Labels -->
+          <span class="ba-label ba-label-before">BEFORE</span>
+          <span class="ba-label ba-label-after">AFTER</span>
+        </div>
+
+        <!-- After-Image Thumbnails -->
+        <div class="ba-thumbnails">
+          <button class="ba-thumb active" data-src="assets/images/roof-after-1.jpg" aria-label="Roof view 1">
+            <img src="assets/images/roof-after-1.jpg" alt="Completed Roof view 1" loading="lazy">
+          </button>
+          <button class="ba-thumb" data-src="assets/images/roof-after-2.jpg" aria-label="Roof view 2">
+            <img src="assets/images/roof-after-2.jpg" alt="Roof installation in progress" loading="lazy">
+          </button>
+        </div>
+      </div>
+
+      <!-- Master Bath & Custom Project Gallery -->
+      <div class="text-center mb-4 mt-5">
+        <h2 class="section-title-blue">MASTER BATH & CUSTOM PROJECTS SHOWCASE</h2>
+        <p class="ba-subtitle">Explore more completed craftsmanship: double-vanity suites, custom walk-in tile showers, and specialty tilework.</p>
+      </div>
+
+      <div class="showcase-gallery">
+        <div class="showcase-card">
+          <img src="assets/images/master-bath-1.jpg" alt="Master Bathroom Double Vanity Suite">
+          <div class="showcase-overlay">
+            <h3>Master Bathroom Suite</h3>
+            <p>Double vanity, arch mirrors, quartz countertop & tile flooring</p>
+          </div>
+        </div>
+
+        <div class="showcase-card">
+          <img src="assets/images/master-bath-2.jpg" alt="Custom Walk-In Pebble Shower">
+          <div class="showcase-overlay">
+            <h3>Pebble Floor Tile Shower</h3>
+            <p>Custom marble wall tile & natural stone pebble pan</p>
+          </div>
+        </div>
+
+        <div class="showcase-card">
+          <img src="assets/images/master-bath-3.jpg" alt="Black-Accent Glass Grid Shower">
+          <div class="showcase-overlay">
+            <h3>Black Grid Glass Shower</h3>
+            <p>Rain showerhead, matte black fixtures & glass panel</p>
+          </div>
+        </div>
+
+        <div class="showcase-card">
+          <img src="assets/images/master-bath-4.jpg" alt="Custom Curbless Tile Shower">
+          <div class="showcase-overlay">
+            <h3>Curbless Marble Shower</h3>
+            <p>Precision wall tile & custom shower pan construction</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Past Masterpieces Grid Section -->
+  <section class="masterpieces-section" id="masterpieces">
+    <div class="container text-center">
+      <h2 class="masterpieces-title">SEE OUR PAST MASTERPIECES</h2>
+      
+      <div class="masterpieces-grid">
+        <div class="masterpiece-card">
+          <img src="assets/images/roof-after-1.jpg" alt="Architectural Shingle Roofing Replacement" loading="lazy">
+        </div>
+        <div class="masterpiece-card">
+          <img src="assets/images/masterpiece-kitchen.jpg" alt="Full Kitchen Remodel & Quartz Counters" loading="lazy">
+        </div>
+        <div class="masterpiece-card">
+          <img src="assets/images/masterpiece-bath1.jpg" alt="Hexagon Tile Bathroom Renovation" loading="lazy">
+        </div>
+        <div class="masterpiece-card">
+          <img src="assets/images/master-bath-1.jpg" alt="Master Suite Double Vanity Renovation" loading="lazy">
+        </div>
+        <div class="masterpiece-card">
+          <img src="assets/images/masterpiece-bath2.jpg" alt="Floating Vanity Marble Bath Remodel" loading="lazy">
+        </div>
+        <div class="masterpiece-card">
+          <img src="assets/images/masterpiece-bath3.jpg" alt="Skylight Master Bath Renovation" loading="lazy">
+        </div>
+      </div>
+
+      <a href="#contact" class="btn-masterpieces">View More Projects</a>
     </div>
   </section>
 
@@ -280,7 +487,7 @@
       <div class="reviews-grid">
         <div class="review-card">
           <div class="stars">★★★★★</div>
-          <p>"RDG Constructions did an amazing job on our exterior painting and roof repair. Professional, timely, and fairly priced. Highly recommended!"</p>
+          <p>"Mirk Construction did an amazing job on our exterior painting and roof repair. Professional, timely, and fairly priced. Highly recommended!"</p>
           <h4>- Sarah M.</h4>
         </div>
         <div class="review-card">
@@ -290,7 +497,7 @@
         </div>
         <div class="review-card">
           <div class="stars">★★★★★</div>
-          <p>"Finding a reliable contractor is tough, but RDG exceeded my expectations. Excellent communication and top-tier craftsmanship."</p>
+          <p>"Finding a reliable contractor is tough, but Mirk exceeded my expectations. Excellent communication and top-tier craftsmanship."</p>
           <h4>- Maria G.</h4>
         </div>
       </div>
@@ -305,19 +512,26 @@
   <!-- FAQ Section -->
   <section class="faq-section" id="faq">
     <div class="container">
-      <h2 class="section-title-blue text-center mb-5">FREQUENTLY ASKED QUESTIONS</h2>
+      <h2 class="section-title-blue text-center mb-5" data-es="PREGUNTAS FRECUENTES">FREQUENTLY ASKED QUESTIONS</h2>
       <div class="faq-accordion">
         <div class="faq-item">
-          <button class="faq-toggle">Are you licensed and insured? <i class="fa-solid fa-plus"></i></button>
-          <div class="faq-content"><p>Yes, RDG Constructions is fully licensed, bonded, and insured to protect you and your property during all residential projects.</p></div>
+          <button class="faq-toggle" data-es="¿Tienen licencia y seguro? <i class='fa-solid fa-plus'></i>">Are you licensed and bonded? <i class="fa-solid fa-plus"></i></button>
+          <div class="faq-content">
+            <p data-es="Sí, Mirk Construction cuenta con licencia y seguro completos para todos los proyectos residenciales.">Yes, Mirk Construction is fully licensed and bonded for all residential projects.</p>
+          </div>
         </div>
         <div class="faq-item">
-          <button class="faq-toggle">Do you offer free estimates? <i class="fa-solid fa-plus"></i></button>
-          <div class="faq-content"><p>Absolutely. We provide free, no-obligation quotes for all our services including painting, roofing, and bathroom remodels.</p></div>
+          <button class="faq-toggle" data-es="¿Cómo funcionan los presupuestos y consultas? <i class='fa-solid fa-plus'></i>">How do estimates and consultations work? <i class="fa-solid fa-plus"></i></button>
+          <div class="faq-content">
+            <p data-es="Comuníquese con los detalles de su proyecto para discutir su alcance. Se proporcionan estimaciones detalladas y consultas después de revisar los requisitos específicos de su proyecto.">Reach out with your project details to discuss your scope. Detailed estimates and consultations are provided after reviewing your specific project requirements.</p>
+          </div>
         </div>
         <div class="faq-item">
-          <button class="faq-toggle">Do you handle commercial projects? <i class="fa-solid fa-plus"></i></button>
-          <div class="faq-content"><p>Currently, our primary focus is on delivering exceptional residential services to homeowners in Modesto and surrounding areas.</p></div>
+          <button class="faq-toggle" data-es="¿Manejan proyectos comerciales? <i class='fa-solid fa-plus'></i>">Do you handle commercial projects? <i class="fa-solid fa-plus"></i></button>
+          <div class="faq-content">
+            <p data-es="Mi enfoque principal son los proyectos residenciales para propietarios de viviendas en Modesto y áreas circundantes. Esto me permite brindar a cada cliente la atención dedicada que merecen.">My primary focus is residential projects for homeowners in Modesto and surrounding areas. This allows me
+              to give each client the dedicated attention they deserve.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -328,77 +542,78 @@
     <div class="container">
       <div class="estimate-wrapper">
         <div class="estimate-info">
-          <h2>Ready For Your Next Project?</h2>
-          <p>Fill out the form below or give us a call directly. We respond to all inquiries quickly and offer transparent, honest quotes.</p>
+          <h2 data-es="¿Listo para su próximo proyecto?">Ready For Your Next Project?</h2>
+          <p data-es="Complete el formulario a continuación o llámeme directamente. Respondo a todas las consultas rápidamente y proporciono cotizaciones directas y honestas — sin presiones, solo respuestas.">Fill out the form below or give me a call directly. I respond to all inquiries quickly and provide
+            straightforward, honest quotes — no pressure, just answers.</p>
 
           <div class="direct-contact mt-4">
             <div class="c-box">
               <i class="fa-solid fa-phone"></i>
               <div>
-                <span class="c-label">Call Directly:</span>
+                <span class="c-label" data-es="Llamar directamente:">Call Directly:</span>
                 <a href="tel:4083750157">(408) 375-0157</a>
               </div>
             </div>
             <div class="c-box">
               <i class="fa-solid fa-earth-americas"></i>
               <div>
-                <span class="c-label">Bilingual Service:</span>
-                <span>Se Habla Español</span>
+                <span class="c-label" data-es="Servicio Bilingüe:">Bilingual Service:</span>
+                <span data-es="Se Habla Español">Se Habla Español</span>
               </div>
             </div>
           </div>
         </div>
 
         <div class="estimate-form-card">
-          <h3>Get a Fast Estimate</h3>
+          <h3 data-es="Solicitar un Presupuesto">Request an Estimate</h3>
           <form id="quoteForm">
             <div class="form-group">
-              <label for="fullName">Your Name *</label>
+              <label for="fullName" data-es="Su Nombre *">Your Name *</label>
               <input type="text" id="fullName" placeholder="e.g. Robert Smith" required>
             </div>
 
             <div class="form-row">
               <div class="form-group">
-                <label for="phoneNum">Phone Number *</label>
+                <label for="phoneNum" data-es="Número de Teléfono *">Phone Number *</label>
                 <input type="tel" id="phoneNum" placeholder="(555) 000-0000" required>
               </div>
               <div class="form-group">
-                <label for="emailAddr">Email Address</label>
+                <label for="emailAddr" data-es="Correo Electrónico">Email Address</label>
                 <input type="email" id="emailAddr" placeholder="robert@example.com">
               </div>
             </div>
 
             <div class="form-group">
-              <label for="projectType">Service Required *</label>
+              <label for="projectType" data-es="Servicio Requerido *">Service Required *</label>
               <select id="projectType" required>
-                <option value="">-- Select Service --</option>
-                <option value="painting">Painting</option>
-                <option value="roofing">Roofing</option>
-                <option value="bathroom">Bathroom Remodel</option>
-                <option value="maintenance">General Maintenance</option>
-                <option value="other">Other Residential Service</option>
+                <option value="" data-es="-- Seleccione un Servicio --">-- Select Service --</option>
+                <option value="painting" data-es="Pintura">Painting</option>
+                <option value="roofing" data-es="Techado">Roofing</option>
+                <option value="bathroom" data-es="Remodelación de Baño">Bathroom Remodel</option>
+                <option value="maintenance" data-es="Mantenimiento General">General Maintenance</option>
+                <option value="other" data-es="Otro Servicio Residencial">Other Residential Service</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label for="projectCity">City / Zip Code</label>
+              <label for="projectCity" data-es="Ciudad / Código Postal">City / Zip Code</label>
               <input type="text" id="projectCity" placeholder="e.g. Modesto, CA" value="Modesto, CA">
             </div>
 
             <div class="form-group">
-              <label for="projectNotes">Project Details / Goals</label>
+              <label for="projectNotes" data-es="Detalles del Proyecto / Objetivos">Project Details / Goals</label>
               <textarea id="projectNotes" rows="3" placeholder="Briefly describe your project..."></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-block">
+            <button type="submit" class="btn btn-primary btn-block" data-es="Enviar Solicitud de Presupuesto">
               Submit Estimate Request
             </button>
           </form>
 
           <div id="formSuccessMessage" class="form-success-msg hidden">
             <i class="fa-solid fa-circle-check"></i>
-            <h4>Estimate Request Sent!</h4>
-            <p>Thank you! We have received your request and will contact you shortly.</p>
+            <h4 data-es="¡Solicitud Enviada!">Estimate Request Sent!</h4>
+            <p data-es="¡Gracias! Hemos recibido su solicitud y nos comunicaremos con usted en breve.">Thank you! We have received your request and will contact you shortly.</p>
           </div>
         </div>
       </div>
@@ -409,9 +624,10 @@
   <section class="service-areas" id="areas">
     <div class="container service-areas-wrapper">
       <div class="areas-content">
-        <h2 class="section-title-blue">SERVICE AREAS</h2>
-        <p>With a stellar reputation and unmatched expertise, we proudly serve Modesto and the surrounding areas. Count on us for top-quality residential service you can trust.</p>
-        
+        <h2 class="section-title-blue" data-es="ÁREAS DE SERVICIO">SERVICE AREAS</h2>
+        <p data-es="Con una reputación estelar y una experiencia inigualable, servimos con orgullo a Modesto y las áreas circundantes. Cuente con nosotros para un servicio residencial de alta calidad en el que puede confiar.">With a stellar reputation and unmatched expertise, we proudly serve Modesto and the surrounding areas. Count
+          on us for top-quality residential service you can trust.</p>
+
         <div class="cities-grid">
           <a href="#" class="city-btn"><i class="fa-solid fa-location-dot"></i> MODESTO, CA</a>
           <a href="#" class="city-btn"><i class="fa-solid fa-location-dot"></i> CERES, CA</a>
@@ -425,7 +641,10 @@
       </div>
       <div class="areas-map">
         <!-- Embedded Google Map -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100867.24075133649!2d-121.07722130386766!3d37.661386221443725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8090538e1a6be1dd%3A0xc665e717df3cc5!2sModesto%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100867.24075133649!2d-121.07722130386766!3d37.661386221443725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8090538e1a6be1dd%3A0xc665e717df3cc5!2sModesto%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+          width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </section>
@@ -433,71 +652,72 @@
   <!-- CTA Banner before Footer -->
   <section class="cta-banner">
     <div class="container text-center">
-      <h2>SERVING MODESTO WITH<br>GREAT REPUTATION & EXPERTISE</h2>
-      <p>Ready to revitalize your space with top-quality residential services? Contact us today to schedule a consultation and discover how our expert team at RDG Constructions can bring your vision to life.</p>
+      <h2 data-es="SIRVIENDO A MODESTO CON<br>GRAN REPUTACIÓN Y EXPERIENCIA">SERVING MODESTO WITH<br>GREAT REPUTATION & EXPERTISE</h2>
+      <p data-es="¿Listo para revitalizar su espacio? Comuníquese hoy para programar una consulta. Como contratista general activo en cada obra, estoy aquí para guiarlo a través del proceso, responder a cada pregunta y hacer realidad su visión con cuidado.">Ready to revitalize your space? Reach out today to schedule a consultation. As a hands-on general contractor, I'm
+        here to walk you through the process, answer every question, and bring your vision to life with care.</p>
       <div class="hero-actions justify-center mt-4">
-        <a href="#estimate" class="btn btn-primary btn-lg">Get a Quote</a>
+        <a href="#estimate" class="btn btn-primary btn-lg" data-es="Obtener Presupuesto">Get a Quote</a>
         <a href="tel:4083750157" class="btn btn-icon-lg"><i class="fa-solid fa-phone"></i></a>
       </div>
     </div>
   </section>
 
   <!-- 4-Column Footer -->
-  <footer class="footer">
+  <footer class="footer" id="contact">
     <div class="container footer-content-4">
       <div class="footer-col brand-col">
-        <div class="brand-text">
-          <span class="brand-name text-white">RDG</span>
-          <span class="brand-sub">CONSTRUCTIONS</span>
-        </div>
-        <p class="mt-3">With our experienced team under our belts, we are committed to delivering top-notch residential services that exceed your expectations.</p>
-        <div class="trust-badge mt-3">
-          <i class="fa-solid fa-medal text-white"></i> <strong class="text-white">A+ Rating</strong> | Modesto's Choice
+        <a href="#" class="brand mb-3">
+          <img src="assets/logo/logo.svg" alt="Mirk Construction Logo" class="brand-logo footer-logo">
+          <div class="brand-text">
+            <span class="brand-name text-white">Mirk</span>
+            <span class="brand-sub">CONSTRUCTION</span>
+          </div>
+        </a>
+        <p class="mt-3" data-es="Operado por su dueño y personalmente comprometido a entregar servicios residenciales de primera categoría que superen sus expectativas — un proyecto a la vez.">Owner-operated and personally committed to delivering top-notch residential services that exceed
+          your expectations — one project at a time.</p>
+        <div class="trust-badge mt-3" data-es="<i class='fa-solid fa-award text-white'></i> <strong class='text-white'>Más de 25 Años de Experiencia</strong> | Calidad Local">
+          <i class="fa-solid fa-award text-white"></i> <strong class="text-white">25+ Years Experience</strong> | Local
+          Quality
         </div>
         <p class="mt-2 text-white font-weight-bold">¡Se Habla Español!</p>
       </div>
 
       <div class="footer-col">
-        <h4>QUICK LINKS</h4>
+        <h4 data-es="ENLACES RÁPIDOS">QUICK LINKS</h4>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#portfolio">Our Portfolio</a></li>
+          <li><a href="#home" data-es="Inicio">Home</a></li>
+          <li><a href="#about" data-es="Nosotros">About Us</a></li>
+          <li><a href="#portfolio" data-es="Nuestro Portafolio">Our Portfolio</a></li>
           <!-- <li><a href="#reviews">Reviews</a></li> -->
-          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#contact" data-es="Contáctenos">Contact Us</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4>SERVICES</h4>
+        <h4 data-es="SERVICIOS">SERVICES</h4>
         <ul>
-          <li><a href="#services">General Maintenance</a></li>
-          <li><a href="#services">Roofing Services</a></li>
-          <li><a href="#services">Interior Painting</a></li>
-          <li><a href="#services">Exterior Painting</a></li>
-          <li><a href="#services">Bathroom Remodeling</a></li>
+          <li><a href="#services" data-es="Mantenimiento General">General Maintenance</a></li>
+          <li><a href="#services" data-es="Servicios de Techado">Roofing Services</a></li>
+          <li><a href="#services" data-es="Pintura Interior">Interior Painting</a></li>
+          <li><a href="#services" data-es="Pintura Exterior">Exterior Painting</a></li>
+          <li><a href="#services" data-es="Remodelación de Baños">Bathroom Remodeling</a></li>
         </ul>
       </div>
 
       <div class="footer-col contact-col">
-        <h4>CONTACT US</h4>
+        <h4 data-es="CONTÁCTENOS">CONTACT US</h4>
         <ul>
           <li><i class="fa-solid fa-mobile-screen"></i> +1 (408) 375-0157</li>
-          <li><i class="fa-regular fa-envelope"></i> contact@rdgconstructions.com</li>
-          <li><i class="fa-solid fa-location-dot"></i> Modesto, CA & Surrounding Areas</li>
-          <li><i class="fa-regular fa-clock"></i> Mon - Sun (7AM - 7PM)</li>
+          <li><i class="fa-regular fa-envelope"></i> contact@mirkconstruction.com</li>
+          <li><i class="fa-solid fa-location-dot"></i> <span data-es="Modesto, CA y Áreas Circundantes">Modesto, CA & Surrounding Areas</span></li>
+          <li><i class="fa-regular fa-clock"></i> <span data-es="Lun - Dom (7AM - 7PM)">Mon - Sun (7AM - 7PM)</span></li>
         </ul>
-        <div class="social-links mt-3">
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-google"></i></a>
-        </div>
       </div>
     </div>
 
     <div class="footer-bottom">
       <div class="container">
-        <p>&copy; 2026 RDG CONSTRUCTIONS | ALL RIGHTS RESERVED</p>
+        <p data-es="&copy; 2026 MIRK CONSTRUCTION | TODOS LOS DERECHOS RESERVADOS">&copy; 2026 MIRK CONSTRUCTION | ALL RIGHTS RESERVED</p>
       </div>
     </div>
   </footer>
@@ -505,9 +725,17 @@
   <!-- Floating Action Buttons -->
   <div class="fab-container">
     <a href="tel:4083750157" class="fab mobile-call-fab" aria-label="Call Now"><i class="fa-solid fa-phone"></i></a>
-    <button id="backToTopBtn" class="fab back-to-top" aria-label="Back to Top"><i class="fa-solid fa-arrow-up"></i></button>
+    <button id="backToTopBtn" class="fab back-to-top" aria-label="Back to Top"><i
+        class="fa-solid fa-arrow-up"></i></button>
+  </div>
+
+  <!-- Image Lightbox Modal -->
+  <div id="imageLightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightboxImg">
   </div>
 
   <script src="script.js"></script>
 </body>
+
 </html>
