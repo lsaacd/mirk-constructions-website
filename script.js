@@ -1,32 +1,37 @@
 // MIRK CONSTRUCTION INTERACTIVE SCRIPT
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 0. Language Toggle Logic
+  // 0. Language Toggle Logic with LocalStorage persistence & Placeholder support
   const langButtons = document.querySelectorAll('.lang-btn');
   const translatableElements = document.querySelectorAll('[data-es]');
-  let currentLang = 'en';
+  const placeholderElements = document.querySelectorAll('[data-es-placeholder]');
 
-  // Store original English text on load
+  // Store original English text & placeholders on load
   translatableElements.forEach(el => {
     if (!el.dataset.en) {
       el.dataset.en = el.innerHTML;
     }
   });
 
-  function setLanguage(lang) {
-    if (currentLang === lang) return;
-    currentLang = lang;
+  placeholderElements.forEach(el => {
+    if (!el.dataset.enPlaceholder) {
+      el.dataset.enPlaceholder = el.placeholder;
+    }
+  });
 
-    // Update active button state
-    langButtons.forEach(btn => {
-      if (btn.dataset.lang === lang) {
-        btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
-      }
-    });
+  function setLanguage(lang, force = false) {
+    const currentLang = localStorage.getItem('mirk_lang') || 'en';
+    if (!force && currentLang === lang && document.documentElement.lang === lang) {
+      updateButtonState(lang);
+      return;
+    }
 
-    // Update text
+    localStorage.setItem('mirk_lang', lang);
+    document.documentElement.lang = lang;
+
+    updateButtonState(lang);
+
+    // Update text / innerHTML
     translatableElements.forEach(el => {
       if (lang === 'es' && el.dataset.es) {
         el.innerHTML = el.dataset.es;
@@ -34,14 +39,37 @@ document.addEventListener('DOMContentLoaded', () => {
         el.innerHTML = el.dataset.en;
       }
     });
+
+    // Update input placeholders
+    placeholderElements.forEach(el => {
+      if (lang === 'es' && el.dataset.esPlaceholder) {
+        el.placeholder = el.dataset.esPlaceholder;
+      } else if (lang === 'en' && el.dataset.enPlaceholder) {
+        el.placeholder = el.dataset.enPlaceholder;
+      }
+    });
+  }
+
+  function updateButtonState(lang) {
+    langButtons.forEach(btn => {
+      if (btn.dataset.lang === lang) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
   }
 
   langButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      setLanguage(btn.dataset.lang);
+      setLanguage(btn.dataset.lang, true);
     });
   });
+
+  // Initialize language from localStorage on page load
+  const initialLang = localStorage.getItem('mirk_lang') || 'en';
+  setLanguage(initialLang, true);
 
   // 1. Mobile Navigation Menu Toggle
   const menuToggle = document.getElementById('menuToggle');

@@ -497,6 +497,43 @@ img {
   animation: float 5s ease-in-out infinite reverse;
 }
 
+/* --- CAPABILITIES SECTION --- */
+.capabilities-section {
+  padding: 80px 0;
+  background-color: var(--bg-light);
+}
+
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.capability-item {
+  background-color: #FFFFFF;
+  padding: 15px 25px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--primary-blue);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.capability-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.text-orange {
+  color: var(--accent-orange);
+}
+
 /* --- SERVICES CAROUSEL --- */
 .services-carousel-section {
   padding: 90px 0;
@@ -1290,7 +1327,7 @@ img {
   .hero-left { padding: 60px 24px; justify-content: center; }
   .hero-right { height: 400px; }
   
-  .intro-container { flex-direction: column; }
+  .intro-container { flex-direction: column; text-align: left; }
   .intro-images { width: 100%; margin-top: 40px; }
   .intro-images .img-front { width: 60%; }
   
@@ -1304,33 +1341,62 @@ img {
 }
 
 @media (max-width: 768px) {
+  /* --- GLOBAL MOBILE TYPOGRAPHY & SPACING --- */
+  .container {
+    padding: 0 16px;
+  }
+  .section-title-blue {
+    font-size: 1.6rem;
+    word-break: break-word;
+    hyphens: auto;
+  }
+  .masterpieces-title {
+    font-size: 1.6rem;
+    word-break: break-word;
+  }
+  .ba-subtitle {
+    font-size: 0.95rem;
+    padding: 0 8px;
+  }
+
+  /* --- TOP BAR & LANGUAGE TOGGLE FIX --- */
+  .top-bar {
+    padding: 10px 0;
+  }
+  .top-bar-content {
+    justify-content: center;
+    gap: 12px;
+  }
+  .top-info > span {
+    display: none;
+  }
+  .lang-toggle {
+    margin-right: 12px;
+    /* Fix glitchy taps on mobile */
+    -webkit-tap-highlight-color: transparent;
+  }
+  .lang-btn {
+    padding: 6px 18px;
+    font-size: 0.85rem;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* --- NAVBAR --- */
   .brand-logo {
-    height: 35px;
+    height: 32px;
   }
   .brand-name {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   .brand-sub {
     font-size: 0.6rem;
     letter-spacing: 2px;
   }
   .nav-btn {
-    display: none; /* Hide the 'Get a Quote' button on mobile to prevent overlapping */
-  }
-  .top-info > span {
-    display: none; /* Hide the top bar location text to make room for language toggle */
-  }
-  .top-bar-content {
-    justify-content: center; /* Center the remaining items in top bar */
-  }
-  .lang-toggle {
-    margin-right: 15px; /* Adjust margin for mobile */
-  }
-  .section-title-blue {
-    font-size: 1.8rem; /* Make section titles smaller on mobile */
-  }
-  .masterpieces-title {
-    font-size: 1.8rem; /* Make masterpiece title smaller on mobile */
+    display: none;
   }
   .nav-links {
     display: none;
@@ -1343,19 +1409,398 @@ img {
     padding: 20px 24px;
     gap: 20px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    z-index: 99;
   }
   .nav-links.active { display: flex; }
   .mobile-menu-toggle { display: block; }
-  
-  .cities-grid { grid-template-columns: 1fr; }
-  .ba-slider { aspect-ratio: 3 / 4; }
-  .ba-handle-circle { width: 40px; height: 40px; }
+
+  /* --- HERO SECTION MOBILE --- */
+  .hero-left {
+    padding: 40px 20px;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    line-height: 1.15;
+  }
+  .trust-list {
+    margin-bottom: 28px;
+  }
+  .trust-list li {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    gap: 10px;
+  }
+  /* Fix hero buttons overlapping: stack vertically and align in a row */
+  .hero-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+  .hero-actions .btn-lg {
+    padding: 14px 28px;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+  }
+  .hero-actions .btn-icon-lg {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+  }
+  .hero-right {
+    height: 280px;
+  }
+
+  /* --- TRUST BAR MOBILE --- */
+  .trust-bar {
+    padding: 16px 0;
+  }
+  .trust-bar-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+  .trust-item {
+    font-size: 0.95rem;
+    gap: 8px;
+    justify-content: center;
+  }
+  .trust-item i {
+    font-size: 1.1rem;
+  }
+
+  /* --- INTRO / ABOUT SECTION MOBILE --- */
+  .intro-section {
+    padding: 60px 0;
+  }
+  .intro-container {
+    text-align: left;
+  }
+  .intro-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 18px;
+    word-break: break-word;
+    hyphens: auto;
+  }
+  .intro-text p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 14px;
+    text-align: left;
+  }
+  .intro-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+  .intro-images {
+    min-height: 320px;
+  }
+  .intro-images .img-back {
+    width: 85%;
+    height: 300px;
+  }
+  .intro-images .img-front {
+    width: 55%;
+    height: 200px;
+    border-width: 5px;
+    bottom: -15px;
+  }
+
+  /* --- CAPABILITIES GRID MOBILE --- */
+  .capabilities-section {
+    padding: 50px 0;
+  }
+  .capabilities-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .capability-item {
+    font-size: 0.95rem;
+    padding: 12px 18px;
+  }
+
+  /* --- SERVICES CAROUSEL MOBILE --- */
+  .services-carousel-section {
+    padding: 50px 0;
+  }
+  .services-header {
+    flex: auto;
+    padding: 0 8px;
+  }
+  .services-header h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .services-header p {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+  .services-slider {
+    gap: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    scroll-padding-left: 16px;
+  }
+  .service-slide {
+    flex: 0 0 260px;
+  }
+  .slide-image-wrapper {
+    height: 260px;
+  }
+  .slide-overlay h3 {
+    font-size: 1.05rem;
+  }
+  .slide-overlay p {
+    font-size: 0.8rem;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  /* Fix service card buttons alignment */
+  .slide-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+    flex-wrap: nowrap;
+  }
+  .slide-actions .btn-sm {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+  .slide-actions .btn-icon-sm {
+    width: 38px;
+    height: 38px;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+  }
+  /* Hide desktop slider arrows on mobile */
+  .slider-btn {
+    display: none !important;
+  }
+
+  /* --- PROCESS STEPS MOBILE --- */
+  .process-section {
+    padding: 50px 0;
+  }
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .step-card {
+    padding: 30px 20px;
+  }
+  .step-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.4rem;
+    margin-bottom: 14px;
+  }
+  .step-card h3 {
+    font-size: 1.05rem;
+  }
+
+  /* --- PORTFOLIO / BEFORE & AFTER MOBILE --- */
+  .portfolio-section {
+    padding: 50px 0;
+  }
+  .ba-slider {
+    aspect-ratio: 3 / 4;
+    border-radius: var(--radius-md);
+  }
+  .ba-slider.aspect-landscape {
+    aspect-ratio: 16 / 11;
+  }
+  .ba-handle-circle {
+    width: 40px;
+    height: 40px;
+  }
   .ba-handle-circle i { font-size: 14px; }
-  .ba-thumb { width: 70px; height: 70px; }
-  .ba-label { font-size: 0.65rem; padding: 4px 12px; bottom: 12px; }
-  .form-row { grid-template-columns: 1fr; }
-  .hero-content h1, .cta-banner h2 { font-size: 2.2rem; }
-  .footer-content-4 { grid-template-columns: 1fr; }
+  .ba-thumb {
+    width: 60px;
+    height: 60px;
+  }
+  .ba-label {
+    font-size: 0.6rem;
+    padding: 4px 10px;
+    bottom: 10px;
+  }
+  .ba-label-before { left: 10px; }
+  .ba-label-after { right: 10px; }
+
+  /* --- SHOWCASE GALLERY MOBILE --- */
+  .showcase-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .showcase-card {
+    height: 220px;
+  }
+  .showcase-overlay {
+    padding: 12px;
+  }
+  .showcase-overlay h3 {
+    font-size: 0.9rem;
+  }
+  .showcase-overlay p {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+
+  /* --- MASTERPIECES MOBILE --- */
+  .masterpieces-section {
+    padding: 50px 0;
+  }
+  .btn-masterpieces {
+    padding: 12px 28px;
+    font-size: 0.9rem;
+  }
+
+  /* --- FAQ MOBILE --- */
+  .faq-section {
+    padding: 50px 0;
+  }
+  .faq-toggle {
+    font-size: 1rem;
+    gap: 10px;
+  }
+
+  /* --- ESTIMATE FORM MOBILE --- */
+  .estimate-section {
+    padding: 50px 0;
+  }
+  .estimate-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 14px;
+  }
+  .estimate-info p {
+    font-size: 0.95rem;
+  }
+  .estimate-form-card {
+    padding: 24px 20px;
+  }
+  .estimate-form-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .form-group label {
+    font-size: 0.85rem;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  /* --- SERVICE AREAS MOBILE --- */
+  .service-areas {
+    padding: 50px 0;
+  }
+  .cities-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .city-btn {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+  /* --- CTA BANNER MOBILE --- */
+  .cta-banner {
+    padding: 50px 0;
+  }
+  .cta-banner h2 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+  .cta-banner p {
+    font-size: 0.95rem;
+  }
+
+  /* --- FOOTER MOBILE --- */
+  .footer {
+    padding-top: 50px;
+  }
+  .footer-content-4 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .footer-col h4 {
+    margin-bottom: 16px;
+  }
+
+  /* --- FABs MOBILE: prevent overlap with content --- */
+  .fab-container {
+    bottom: 20px;
+    right: 16px;
+    gap: 10px;
+  }
+  .fab {
+    width: 46px;
+    height: 46px;
+    font-size: 1.1rem;
+  }
+  .fab.mobile-call-fab {
+    display: flex;
+  }
+}
+
+/* --- EXTRA SMALL SCREENS (< 400px) --- */
+@media (max-width: 400px) {
+  .hero-content h1 {
+    font-size: 1.7rem;
+  }
+  .section-title-blue {
+    font-size: 1.4rem;
+  }
+  .masterpieces-title {
+    font-size: 1.4rem;
+  }
+  .hero-actions {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .hero-actions .btn-lg {
+    padding: 12px 22px;
+    font-size: 0.85rem;
+  }
+  .service-slide {
+    flex: 0 0 230px;
+  }
+  .slide-image-wrapper {
+    height: 230px;
+  }
+  .showcase-gallery {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .showcase-card {
+    height: 260px;
+  }
+  .intro-text h2 {
+    font-size: 1.5rem;
+  }
+  .estimate-info h2 {
+    font-size: 1.5rem;
+  }
+  .cta-banner h2 {
+    font-size: 1.4rem;
+  }
+  .ba-thumb {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 /* --- TRUST BADGES BAR --- */
@@ -1491,6 +1936,8 @@ img {
   transition: var(--transition);
   color: #FFFFFF;
   text-decoration: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 .fab.back-to-top {
   background-color: var(--primary-blue);
@@ -1509,12 +1956,6 @@ img {
   transform: scale(1.1) translateY(-3px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.3);
   color: #FFFFFF;
-}
-
-@media (max-width: 768px) {
-  .trust-bar-content { flex-direction: column; align-items: center; text-align: center; }
-  .process-steps { grid-template-columns: 1fr; }
-  .fab.mobile-call-fab { display: flex; }
 }
 
 /* --- LIGHTBOX STYLES --- */
