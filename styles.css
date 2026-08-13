@@ -660,11 +660,14 @@ img {
   z-index: 10;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: var(--transition);
-  display: none; /* Show via JS if needed or on hover */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
-.services-slider-container:hover .slider-btn { display: flex; align-items: center; justify-content: center; }
-.slider-btn.left { left: 20px; }
-.slider-btn.right { right: 20px; }
+.slider-btn.left { left: 10px; }
+.slider-btn.right { right: 10px; }
 .slider-btn:hover { background: var(--primary-blue); color: #fff; }
 
 
@@ -1580,9 +1583,11 @@ img {
     font-size: 0.95rem;
     flex-shrink: 0;
   }
-  /* Hide desktop slider arrows on mobile */
+  /* Adjust slider arrows for mobile */
   .slider-btn {
-    display: none !important;
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
   }
 
   /* --- PROCESS STEPS MOBILE --- */

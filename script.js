@@ -93,15 +93,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const slider = document.getElementById('servicesSlider');
 
   if (btnLeft && btnRight && slider) {
-    // Scroll amount per click (approx one card width + gap)
-    const scrollAmount = 345; 
+    // Reset slider to the start on page load
+    slider.scrollLeft = 0;
+
+    // Dynamically calculate scroll amount based on actual card width + gap
+    function getScrollAmount() {
+      const firstCard = slider.querySelector('.service-slide');
+      if (firstCard) {
+        const gap = parseInt(getComputedStyle(slider).gap) || 16;
+        return firstCard.offsetWidth + gap;
+      }
+      return 280; // fallback
+    }
 
     btnLeft.addEventListener('click', () => {
-      slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      slider.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
     });
 
     btnRight.addEventListener('click', () => {
-      slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      slider.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
     });
   }
 
