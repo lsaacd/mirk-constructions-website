@@ -1590,15 +1590,25 @@ img {
     font-size: 1rem;
   }
 
-  /* --- PROCESS STEPS MOBILE --- */
+  /* --- PROCESS STEPS MOBILE: Swipeable Carousel --- */
   .process-section {
     padding: 50px 0;
   }
   .process-steps {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding: 0 16px 10px;
+    scrollbar-width: none;
+  }
+  .process-steps::-webkit-scrollbar {
+    display: none;
   }
   .step-card {
+    flex: 0 0 calc(100vw - 64px);
+    scroll-snap-align: center;
     padding: 30px 20px;
   }
   .step-icon {
@@ -1609,6 +1619,10 @@ img {
   }
   .step-card h3 {
     font-size: 1.05rem;
+  }
+  /* Show dot indicators on mobile */
+  .process-dots {
+    display: flex;
   }
 
   /* --- PORTFOLIO / BEFORE & AFTER MOBILE --- */
@@ -1876,6 +1890,34 @@ img {
   margin-bottom: 10px;
 }
 
+/* Process Carousel Dot Indicators (hidden on desktop) */
+.process-dots {
+  display: none; /* Only shown on mobile via media query */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.process-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-blue);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.process-dot.active {
+  background: var(--primary-blue);
+  transform: scale(1.2);
+}
+.process-dot:hover {
+  background: var(--accent-orange);
+  border-color: var(--accent-orange);
+}
 /* --- FAQ ACCORDION --- */
 .faq-section {
   padding: 90px 0;
