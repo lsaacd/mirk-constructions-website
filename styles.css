@@ -567,6 +567,7 @@ img {
 .services-slider-container {
   flex: 1;
   position: relative;
+  min-width: 0; /* Prevents flex child from expanding beyond viewport, enabling scrolling */
 }
 
 .services-slider {
@@ -647,7 +648,7 @@ img {
 /* Slider Controls — Large overlay arrows on top of cards */
 .slider-btn {
   position: absolute;
-  top: 50%;
+  top: 160px; /* Vertically center on the 320px tall image */
   transform: translateY(-50%);
   width: 52px;
   height: 52px;
@@ -1596,6 +1597,7 @@ img {
     width: 44px;
     height: 44px;
     font-size: 1.1rem;
+    top: 130px; /* Vertically center on the 260px tall mobile image */
   }
 
   /* --- PROCESS STEPS MOBILE: Swipeable Carousel --- */
