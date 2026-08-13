@@ -264,14 +264,12 @@ document.addEventListener('DOMContentLoaded', () => {
       baSlider.addEventListener('touchstart', (e) => {
         isDragging = true;
         setSliderPosition(e.touches[0].clientX);
-        e.preventDefault();
-      }, { passive: false });
+      }, { passive: true });
 
       baSlider.addEventListener('touchmove', (e) => {
         if (!isDragging) return;
         setSliderPosition(e.touches[0].clientX);
-        e.preventDefault();
-      }, { passive: false });
+      }, { passive: true });
 
       baSlider.addEventListener('touchend', () => {
         isDragging = false;

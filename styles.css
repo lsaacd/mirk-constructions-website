@@ -716,6 +716,7 @@ img {
   user-select: none;
   -webkit-user-select: none;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+  touch-action: pan-y; /* Allows vertical scrolling to pass through the slider on mobile */
 }
 
 /* Wide / Landscape Sliders (e.g., Roofing) */
@@ -918,8 +919,8 @@ img {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #FFFFFF;
-  border: 3px solid var(--accent-orange);
+  background: var(--accent-orange);
+  border: 3px solid #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -937,7 +938,7 @@ img {
 
 .ba-handle-circle i {
   font-size: 18px;
-  color: var(--accent-orange);
+  color: #FFFFFF;
 }
 
 /* Labels */
