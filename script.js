@@ -135,51 +135,78 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Process Steps Carousel (Mobile Dot Navigation)
+  // 4. Process Steps Carousel (Mobile Dot & Arrow Navigation)
   const processSteps = document.getElementById('processSteps');
   const processDots = document.getElementById('processDots');
+  const processBtnLeft = document.getElementById('processLeft');
+  const processBtnRight = document.getElementById('processRight');
 
-  if (processSteps && processDots) {
-    const dots = processDots.querySelectorAll('.process-dot');
+  if (processSteps) {
     const cards = processSteps.querySelectorAll('.step-card');
+    
+    // Dynamic scroll amount (width of card + gap)
+    function getProcessScrollAmount() {
+      const firstCard = processSteps.querySelector('.step-card');
+      if (firstCard) {
+        const gap = parseInt(getComputedStyle(processSteps).gap) || 16;
+        return firstCard.offsetWidth + gap;
+      }
+      return 280; // fallback
+    }
 
-    // Click a dot to scroll to that card
-    dots.forEach(dot => {
-      dot.addEventListener('click', () => {
-        const index = parseInt(dot.dataset.index);
-        const targetCard = cards[index];
-        if (targetCard) {
-          targetCard.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-        }
+    if (processBtnLeft && processBtnRight) {
+      processBtnLeft.addEventListener('click', () => {
+        processSteps.scrollBy({ left: -getProcessScrollAmount(), behavior: 'smooth' });
       });
-    });
 
-    // Update dots on scroll (using scroll event with debounce)
-    let scrollTimeout;
-    processSteps.addEventListener('scroll', () => {
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
-        const containerRect = processSteps.getBoundingClientRect();
-        const containerCenter = containerRect.left + containerRect.width / 2;
-        let closestIndex = 0;
-        let closestDistance = Infinity;
+      processBtnRight.addEventListener('click', () => {
+        processSteps.scrollBy({ left: getProcessScrollAmount(), behavior: 'smooth' });
+      });
+    }
 
-        cards.forEach((card, i) => {
-          const cardRect = card.getBoundingClientRect();
-          const cardCenter = cardRect.left + cardRect.width / 2;
-          const distance = Math.abs(cardCenter - containerCenter);
-          if (distance < closestDistance) {
-            closestDistance = distance;
-            closestIndex = i;
+    if (processDots) {
+      const dots = processDots.querySelectorAll('.process-dot');
+
+      // Click a dot to scroll to that card
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          const index = parseInt(dot.dataset.index);
+          const targetCard = cards[index];
+          if (targetCard) {
+            targetCard.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
           }
         });
+      });
 
-        dots.forEach((d, i) => {
-          d.classList.toggle('active', i === closestIndex);
-        });
-      }, 50);
-    });
+      // Update dots on scroll
+      let scrollTimeout;
+      processSteps.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          const containerRect = processSteps.getBoundingClientRect();
+          const containerCenter = containerRect.left + containerRect.width / 2;
+          let closestIndex = 0;
+          let closestDistance = Infinity;
+
+          cards.forEach((card, i) => {
+            const cardRect = card.getBoundingClientRect();
+            const cardCenter = cardRect.left + cardRect.width / 2;
+            const distance = Math.abs(cardCenter - containerCenter);
+            if (distance < closestDistance) {
+              closestDistance = distance;
+              closestIndex = i;
+            }
+          });
+
+          dots.forEach((d, i) => {
+            d.classList.toggle('active', i === closestIndex);
+          });
+        }, 50);
+      });
+    }
   }
+
+
 
   // 5. FAQ Accordion Logic
   const faqItems = document.querySelectorAll('.faq-item');

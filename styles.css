@@ -666,8 +666,6 @@ img {
   justify-content: center;
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
 }
 .slider-btn.left { left: 8px; }
 .slider-btn.right { right: 8px; }
@@ -1605,6 +1603,10 @@ img {
   .process-section {
     padding: 50px 0;
   }
+  .process-slider-container .slider-btn {
+    display: flex; /* Show arrows on mobile */
+    top: 50%; /* Center relative to cards */
+  }
   .process-steps {
     display: flex;
     overflow-x: auto;
@@ -1863,6 +1865,13 @@ img {
 .process-section {
   padding: 90px 0;
   background-color: #FFFFFF;
+}
+.process-slider-container {
+  position: relative;
+  min-width: 0;
+}
+.process-slider-container .slider-btn {
+  display: none; /* Hidden on desktop, shown on mobile */
 }
 .process-steps {
   display: grid;
